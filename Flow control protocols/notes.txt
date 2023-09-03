@@ -18,3 +18,18 @@ if ack not recieved till 3RTT sender again sends the frame
 2. frame lost
 3. ack lost
 4. ack recieved after timer expired(delay)
+drawbacks:
+	dead slow one frame at a time
+	poor utilization of bandwidth
+
+	Sliding window
+multiple frames sent at once
+each frame is numbered
+no packet loss handling
+
+	Go back N 
+entire window is resent on packet loss
+
+	selective repeat
+only the lost frame is resent
+reciever can send negative ack of packet are out of order
