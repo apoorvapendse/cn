@@ -1,0 +1,20 @@
+	stop and wait protocol
+for noiseless channel
+unidirectional transmisssion
+no error correction
+sender waits for ack after sending each frame
+Algo:
+	sender: 1. send one packet at a time
+			2. send next packet after recieving ack
+	reciver: 1.recieve packet and send ack
+adv: simple
+disadv: dead slow, transmission stuck due to lost packet or ack, no handling of delayed data/ack
+
+	Stop and wait ARQ(auto repeat req)
+added handling for packet loss
+if ack not recieved till 3RTT sender again sends the frame
+4 possibilities
+1. normal
+2. frame lost
+3. ack lost
+4. ack recieved after timer expired(delay)
